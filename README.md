@@ -23,28 +23,28 @@ For this program, you are to write a program in PROLOG to solve the following lo
 
 A college dorm hallway has 5 1-person rooms. Each resident is a different major, listens to a different style of music, drives a different make of car, has a different favorite sports team, and a different favorite beverage.
 
-The computer science student lives in the middle of the corridor
-The history major is a jazz fan.
-The Yankees fan drives a Toyota.
-The accounting major drinks Coke.
-The engineering major drinks coffee.
-The computer science student and history student are neighbors.
-The student at the far end of the hall likes classical music
-The tea drinker drives a Tesla.
-The classical music fan lives next to the jazz listener.
-The English major does not live in either of the first two rooms.
-The Royals fan drives a Tesla.
-The Cubs fan listens to jazz.
-The engineering major follows the Chiefs
-The first room is the home of the Broncos fan
-The Coke drinker drives a Nissan.
-The country music fan and the techno fan are neighbors.
-The accounting major lives in the first room.
-The fans of the 2 Kansas City teams (Chiefs and Royals) are neighbors
-The accounting major listens to rock music
-The Yankees fan drinks milk.
-The Chevy driver listens to country music.
-The jazz fan drives a Ford.
+1. The computer science student lives in the middle of the corridor
+1. The history major is a jazz fan.
+1. The Yankees fan drives a Toyota.
+1. The accounting major drinks Coke.
+1. The engineering major drinks coffee.
+1. The computer science student and history student are neighbors.
+1. The student at the far end of the hall likes classical music
+1. The tea drinker drives a Tesla.
+1. The classical music fan lives next to the jazz listener.
+1. The English major does not live in either of the first two rooms.
+1. The Royals fan drives a Tesla.
+1. The Cubs fan listens to jazz.
+1. The engineering major follows the Chiefs
+1. The first room is the home of the Broncos fan
+1. The Coke drinker drives a Nissan.
+1. The country music fan and the techno fan are neighbors.
+1. The accounting major lives in the first room.
+1. The fans of the 2 Kansas City teams (Chiefs and Royals) are neighbors
+1. The accounting major listens to rock music
+1. The Yankees fan drinks milk.
+1. The Chevy driver listens to country music.
+1. The jazz fan drives a Ford.
 
 What music does the computer-science student listen to, and what does the English major drink?
 
