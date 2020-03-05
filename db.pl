@@ -84,14 +84,48 @@ solve(Solution) :-
     nextTo([_,       _,         _,       classical, _], [_,           _, _,      jazz,   _], Solution),   % 09
     nextTo([_,       _,         _,       country,   _], [_,           _, _,      techno, _], Solution),   % 16
     nextTo([_,       _,         chiefs,  _,         _], [_,           _, royals, _,      _], Solution),   % 18
+    /* every major should be used once */
+    member([ accounting,  _,         _,       _,         _      ], Solution),
+    member([ compsci,     _,         _,       _,         _      ], Solution),
+    member([ engineering, _,         _,       _,         _      ], Solution),
+    member([ history,     _,         _,       _,         _      ], Solution),
+    member([ english,     _,         _,       _,         _      ], Solution),
+    /* every car should be used once */
+    member([ accounting,  _,         _,       _,         _      ], Solution),
+    member([ compsci,     _,         _,       _,         _      ], Solution),
+    member([ engineering, _,         _,       _,         _      ], Solution),
+    member([ history,     _,         _,       _,         _      ], Solution),
+    member([ english,     _,         _,       _,         _      ], Solution),
+    /* every major should be used once */
+    member([ _,           ford,      _,       _,         _      ], Solution),
+    member([ _,           chevy,     _,       _,         _      ], Solution),
+    member([ _,           nissan,    _,       _,         _      ], Solution),
+    member([ _,           toyota,    _,       _,         _      ], Solution),
+    member([ _,           tesla,     _,       _,         _      ], Solution),
+    /* every sport should be used once */
+    member([ _,           _,         royals,  _,         _      ], Solution),
+    member([ _,           _,         chiefs,  _,         _      ], Solution),
+    member([ _,           _,         yankees, _,         _      ], Solution),
+    member([ _,           _,         broncos, _,         _      ], Solution),
+    member([ _,           _,         cubs,    _,         _      ], Solution),
+    /* every music should be used once */
+    member([ _,           _,         _,       classical, _      ], Solution),
+    member([ _,           _,         _,       country,   _      ], Solution),
+    member([ _,           _,         _,       jazz,      _      ], Solution),
+    member([ _,           _,         _,       rock,      _      ], Solution),
+    member([ _,           _,         _,       techno,    _      ], Solution),
+    /* every drink should be used once */
+    member([ _,           _,         _,       _,         coke   ], Solution),
+    member([ _,           _,         _,       _,         coffee ], Solution),
+    member([ _,           _,         _,       _,         tea    ], Solution),
+    member([ _,           _,         _,       _,         milk   ], Solution),
+    member([ _,           _,         _,       _,         water  ], Solution),
     /* unique */
-    /*
     aggregate_all(count, member([ accounting,  _,      _,        _,         _      ], Solution), Count), Count is 1,
     aggregate_all(count, member([ compsci,     _,      _,        _,         _      ], Solution), Count), Count is 1,
     aggregate_all(count, member([ engineering, _,      _,        _,         _      ], Solution), Count), Count is 1,
     aggregate_all(count, member([ history,     _,      _,        _,         _      ], Solution), Count), Count is 1,
     aggregate_all(count, member([ english,     _,      _,        _,         _      ], Solution), Count), Count is 1,
-    */
     aggregate_all(count, member([ _,           ford,   _,        _,         _      ], Solution), Count), Count is 1,
     aggregate_all(count, member([ _,           chevy,  _,        _,         _      ], Solution), Count), Count is 1,
     aggregate_all(count, member([ _,           nissan, _,        _,         _      ], Solution), Count), Count is 1,
@@ -107,13 +141,11 @@ solve(Solution) :-
     aggregate_all(count, member([ _,           _,      _,        jazz,      _      ], Solution), Count), Count is 1,
     aggregate_all(count, member([ _,           _,      _,        rock,      _      ], Solution), Count), Count is 1,
     aggregate_all(count, member([ _,           _,      _,        techno,    _      ], Solution), Count), Count is 1,
-    /*
     aggregate_all(count, member([ _,           _,      _,        _,         coke   ], Solution), Count), Count is 1,
     aggregate_all(count, member([ _,           _,      _,        _,         coffee ], Solution), Count), Count is 1,
     aggregate_all(count, member([ _,           _,      _,        _,         tea    ], Solution), Count), Count is 1,
     aggregate_all(count, member([ _,           _,      _,        _,         milk   ], Solution), Count), Count is 1,
     aggregate_all(count, member([ _,           _,      _,        _,         water  ], Solution), Count), Count is 1,
-    */
     /* print solution */
     write('--------------------------------'), nl,
     write_list(Solution).
@@ -152,6 +184,14 @@ get_majors(List, X) :- maplist(get_major, List, X).
 get_sports(List, X) :- maplist(get_sport, List, X).
 get_musics(List, X) :- maplist(get_music, List, X).
 get_drinks(List, X) :- maplist(get_drink, List, X).
+
+every_drink(Solution) :-
+    get_drinks(Solution, Drinks),
+    aggregate_all(count, member(coke,   Drinks), Count), Count is 1,
+    aggregate_all(count, member(coffee, Drinks), Count), Count is 1,
+    aggregate_all(count, member(tea,    Drinks), Count), Count is 1,
+    aggregate_all(count, member(milk,   Drinks), Count), Count is 1,
+    aggregate_all(count, member(water,  Drinks), Count), Count is 1.
 
 /*
 
