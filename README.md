@@ -1,13 +1,17 @@
 # Prolog Logic Puzzle
+
 UMKC CS461 Project3
+
 # 
-To run this project, run the following commands from prolog:
+
+To run this project, run the following from the command line:
 
 ```
-[db].       % reads in the database
-solve(X).   % solves the puzzle and prints the solution
+prolog init.pl
 ```
-The solution I found:
+
+This will print out the following solution:
+
 ```
 [ accounting,  nissan, broncos, rock,      coke   ]
 [ engineering, chevy,  chiefs,  country,   coffee ]
@@ -15,6 +19,8 @@ The solution I found:
 [ history,     ford,   cubs,    jazz,      water  ]
 [ english,     toyota, yankees, classical, milk   ]
 ```
+
+So to answer the prompt, the computer-science student listen to techno music, and does the English major drinks milk.
 
 # Assignment Description
 For this program, you are to write a program in PROLOG to solve the following logic problem. Note that 'adjacent to' or 'neighbor' may be on the left or the right unless other constraints dictate otherwise. And of course, the neighbor relation is symmetric. If A is a neighbor of B, then B is a neighbor of A.
@@ -53,4 +59,4 @@ Summary:
 - Music: Classical, country, jazz, rock, techno
 - Drinks: Coke, coffee, tea, milk, water
 
-Write a PROLOG program that contains the above facts as a knowledge base, and functions to capture 'adjacent to,' 'all different,' etc. Your program should begin with the above facts and deduce the major, car, music, sports team, and beverage for each resident, printing the information at the end. Submit your program code and output from a sample execution.
+Write a PROLOG program that contains the above facts as a knowledge base, and functions to capture 'adjacent to', 'all different,' etc. Your program should begin with the above facts and deduce the major, car, music, sports team, and beverage for each resident, printing the information at the end. Submit your program code and output from a sample execution.
