@@ -155,15 +155,3 @@ write_list(List) :-
     length(List, Length),
     Length > 0,
     write_list(Tail).
-
-/*
-
-Majors = [ accounting,   compsci,    engineering,    history,    english ].
-Cars   = [ ford,         chevy,      nissan,         toyota,     tesla   ].
-Sports = [ royals,       chiefs,     yankees,        broncos,    cubs    ].
-Music  = [ classical,    country,    jazz,           rock,       techno  ].
-Drinks = [ coke,         coffee,     tea,            milk,       water   ].
-
-solve(X), get_majors(X, A), get_cars(X, B), get_sports(X, C), get_musics(X, D), get_drinks(X, E).
-
-*/
