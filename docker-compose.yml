@@ -1,0 +1,6 @@
+# A console program, not a server: the container prints the puzzle solution and exits.
+# It publishes no ports.
+services:
+  puzzle:
+    build: .
+    mem_limit: 128m
